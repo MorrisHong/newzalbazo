@@ -31,4 +31,7 @@
 
     <mybatis-spring:scan base-package="kr.zalbazo.newzalbazo.mapper"/>
 
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 </beans>
