@@ -21,7 +21,10 @@
         <beans:property name="suffix" value=".jsp" />
     </beans:bean>
 
-    <context:component-scan base-package="kr.zalbazo.newzalbazo.controller"/>
+    <context:component-scan base-package="kr.zalbazo.newzalbazo.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
 
 
 
